@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RailsAuth</title>
+    <%= csrf_meta_tags %>
+        <!-- Bootstrap latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- MUI Junk -->
+        <link href="//cdn.muicss.com/mui-0.7.5/css/mui.min.css" rel="stylesheet" type="text/css" />
+        <script src="//cdn.muicss.com/mui-0.7.5/js/mui.min.js"></script>
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+            <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+    <%= render "partials/flash" %>
+        <div class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/logout">Log Out</a></li>
+                <li><a href="/user">Sign Up</a></li>
+            </ul>
+        </div>
+
+        <%= yield %>
+</body>
+
+</html>
